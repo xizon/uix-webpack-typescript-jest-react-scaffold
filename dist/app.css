@@ -1,0 +1,23 @@
+/*!
+ * 
+ * 	Boot Helpers
+ *
+ * 	@source: https://github.com/xizon/uix-webpack-typescript-jest-react-scaffold
+ * 	@version: 0.0.1 (January 2, 2022)
+ * 	@author: UIUX Lab <uiuxlab@gmail.com>
+ * 	@license: MIT
+ *
+ */
+button {
+  border: 0;
+  margin: 5px;
+  border-radius: 3px;
+  padding: 5px 15px;
+}
+
+button:hover {
+  filter: Invert();
+}
+
+
+/*# sourceMappingURL=app.css.map*/

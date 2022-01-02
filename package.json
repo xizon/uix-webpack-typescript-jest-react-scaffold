@@ -1,0 +1,107 @@
+{
+  "name": "uix-webpack-typescript-jest-react-scaffold",
+  "version": "0.0.1",
+  "description": "A scaffold boilerplate including TypeScript, React, Jest and ESLint.",
+  "main": "dist/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+      "^@/(.*)": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest",
+      "^.+\\.(ts|tsx)?$": "ts-jest"
+    }
+  },
+  "scripts": {
+    "check": "tsc",
+    "dev": "cross-env NODE_ENV=development webpack --progress --mode development --config build/config.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --mode production --config build/config.js",
+    "test": "cross-env NODE_ENV=test jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "uix-webpack-typescript-jest-react-scaffold"
+  },
+  "keywords": [
+    "webpack",
+    "typescript",
+    "react",
+    "jest",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xizon/uix-webpack-typescript-jest-react-scaffold/issues"
+  },
+  "homepage": "https://github.com/xizon/uix-webpack-typescript-jest-react-scaffold#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^27.0.3",
+    "@types/react": "^17.0.38",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^3.3.1",
+    "eslint": "^7.32.0",
+    "file-loader": "^6.2.0",
+    "glslify-loader": "^2.0.0",
+    "jest": "^27.0.4",
+    "jsdom": "^18.1.1",
+    "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^2.4.5",
+    "moment": "^2.29.1",
+    "node-sass": "^7.0.1",
+    "raw-loader": "^4.0.2",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.1.4",
+    "ts-jest": "^27.0.4",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser",
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {},
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "author": "UIUX Lab"
+}
