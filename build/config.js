@@ -244,6 +244,8 @@ webpackConfig.plugins.push(
  */
  const compiler = webpack(webpackConfig);
  const server = new WebpackDevServer(compiler, {
+	 // After setting the static parameter, the file path in `public/index.html` can be written as: `../dist/app.min.css`
+	 static: path.resolve(__dirname, '../' ),
 	 hot: true,
 	 // Disables a full-screen overlay in the browser when there are compiler errors or warnings.
 	 client: {
