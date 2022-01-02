@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '@/router';
 
-//A <Router> that uses the hash portion of the URL (i.e. window.location.hash) to keep your UI in sync with the URL.
+import './index.scss';
+
 ReactDOM.render(
-    <App />,
-  document.getElementById('app'),
+  <h1>Hello, world!</h1>,
+  document.getElementById('app')
 );
