@@ -1,7 +1,7 @@
 # uix-webpack-typescript-jest-react-scaffold
   
 [![npm version](https://img.shields.io/npm/v/uix-webpack-typescript-jest-react-scaffold?style=for-the-badge)](https://www.npmjs.com/package/uix-webpack-typescript-jest-react-scaffold)
-[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=for-the-badge)](LICENSE)
 
 A scaffold boilerplate including TypeScript, React, Jest and ESLint.
 
