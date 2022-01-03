@@ -3,7 +3,7 @@
  * 	Boot Helpers
  *
  * 	@source: https://github.com/xizon/uix-webpack-typescript-jest-react-scaffold
- * 	@version: 0.0.2 (January 2, 2022)
+ * 	@version: 0.0.3 (January 3, 2022)
  * 	@author: UIUX Lab <uiuxlab@gmail.com>
  * 	@license: MIT
  *

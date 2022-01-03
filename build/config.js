@@ -118,7 +118,7 @@ const webpackConfig = {
 						options: {
 							// you can specify a publicPath here
 							// by default it use publicPath in webpackOptions.output
-							publicPath: path.resolve(__dirname, '../dist')
+							publicPath: '../dist/'
 	
 						}
 					},
@@ -157,55 +157,6 @@ const webpackConfig = {
 				test: /\.json$/,
 				use: 'json-loader'
 			},
-			
-			{
-				 test: /\.(png|jpe?g|gif|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-				loader: 'file-loader', 
-				options: {
-				  esModule: false, //change the css path via output
-				  outputPath: (url, resourcePath, context) => { //the files from `./src/...` will copy to `./dist/`
-					  
-					 //original name: path.basename(resourcePath)
-					 
-					 //fonts
-					 if ( resourcePath.indexOf( 'webfonts/' ) >= 0 || resourcePath.indexOf( 'fonts/' ) >= 0 ) {
-						 return '../fonts/' + url;
-					 }
-					  
-					 //imags
-					 if ( resourcePath.indexOf( 'images/' ) >= 0 || resourcePath.indexOf( 'img/' ) >= 0 ) {
-						 return '../images/' + url;
-					 } 
-					  
-						 
-					 return '../misc/' + url;
-					
-				  },
-				  publicPath: (url, resourcePath, context) => { //the css path of output 
-					 
-					// If the file is in the root directory, you can leave it empty. If in another directory, 
-					// you can write: "/blog". (but no trailing slash)
-					const websiteRootDir = '';
-	
-	
-					 //fonts
-					 if ( resourcePath.indexOf( 'webfonts/' ) >= 0 || resourcePath.indexOf( 'fonts/' ) >= 0 ) {
-						 return `${websiteRootDir}/dist/fonts/${url}`;
-					 }
-					
-					 //imags
-					 if ( resourcePath.indexOf( 'images/' ) >= 0 || resourcePath.indexOf( 'img/' ) >= 0 ) {
-						 return `${websiteRootDir}/dist/images/${url}`;
-					 } 
-					  
-						 
-					 return `${websiteRootDir}/dist/misc/${url}`;
-					  
-					
-				  }
-				}
-			}
-
 
 
         ],
