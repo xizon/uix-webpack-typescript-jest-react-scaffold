@@ -1,6 +1,6 @@
 {
   "name": "uix-webpack-typescript-jest-react-scaffold",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A scaffold boilerplate including TypeScript, React, Jest and ESLint.",
   "main": "dist/app.js",
   "directories": {

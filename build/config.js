@@ -110,7 +110,11 @@ const webpackConfig = {
 
 			{
 				test: /\.(sa|sc|c)ss$/,
-				include: path.resolve(__dirname, '../src'),
+				include: [
+					path.resolve(__dirname, '../src'),
+					// Prevent errors in calling the node library: Module parse failed: Unexpected character'@'
+					path.resolve(__dirname, '../node_modules'),
+				],
 				use: [
 					// fallback to style-loader in development
 					{
